@@ -28,7 +28,12 @@ This repo reads it.
 
 ## The system in one diagram
 
-<p align="center"><img src="assets/architecture.svg" alt="System architecture: HARNESS SSOT, evolution loop, FUSION routing" width="92%"></p>
+<p align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/architecture-dark.svg">
+  <img src="assets/architecture.svg" alt="System architecture: HARNESS SSOT, evolution loop, FUSION routing" width="92%">
+</picture>
+</p>
 
 *(diagram source: [docs/architecture.mmd](docs/architecture.mmd))*
 
