@@ -145,6 +145,7 @@ Requirements: Claude Code CLI. macOS for the automated weekly job (elsewhere: ru
 
 - Routing grounded in [Cognition — Devin Fusion](https://cognition.com/blog/devin-fusion) (their measurements; independent implementation, no affiliation)
 - Built for and battle-tested with [Claude Code](https://claude.com/claude-code); Codex support via marker-bounded `AGENTS.md` blocks
+- Hero image is AI-generated for this project; no copyright is claimed on it — reuse freely
 
 ## License
 
