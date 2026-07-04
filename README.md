@@ -26,40 +26,9 @@ This repo reads it.
 
 ## The system in one diagram
 
-```mermaid
-flowchart TB
-    subgraph SSOT["HARNESS.md (single source of truth)"]
-        LOOP["7-step work loop"]
-        RULES["Invariant rules (versioned)"]
-        ROUTE["FUSION routing table"]
-    end
+<p align="center"><img src="assets/architecture.svg" alt="System architecture: HARNESS SSOT, evolution loop, FUSION routing" width="92%"></p>
 
-    SSOT -->|loaded by| CC["CLAUDE.md<br/>(Claude Code, every session)"]
-    SSOT -->|marker block| CX["AGENTS.md<br/>(Codex CLI)"]
-
-    subgraph EVO["Evolution loop"]
-        A["Path A (live):<br/>same correction twice<br/>→ becomes a rule NOW"]
-        B["Path B (weekly, launchd):<br/>mine.py digs transcripts<br/>→ promotion session<br/>→ version log"]
-        P["probes.sh:<br/>5 behavioral traps<br/>regression-grade every change"]
-    end
-
-    CC -->|"your corrections<br/>(transcripts)"| B
-    CX -->|"~/.codex/history.jsonl"| B
-    A --> SSOT
-    B --> SSOT
-    SSOT --> P
-
-    subgraph FUSION["FUSION routing (per delegation)"]
-        M["mechanical / measurement<br/>→ cheapest tier"]
-        PR["production<br/>→ mid tier"]
-        J["judgment<br/>→ top tier, NEVER down"]
-        L["fusion-ledger.jsonl<br/>(pass/fail per delegation)"]
-    end
-
-    ROUTE --> M & PR & J
-    M & PR & J --> L
-    L -->|"weekly run learns<br/>routing from outcomes"| B
-```
+*(diagram source: [docs/architecture.mmd](docs/architecture.mmd))*
 
 Three subsystems, one loop: the **harness** sets the quality floor, **evolution** turns your corrections into new floor, and **FUSION routing** exploits the floor to push work down to cheaper models safely — logging outcomes that evolution then learns routing from.
 
