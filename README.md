@@ -22,6 +22,8 @@ Every Claude Code power user has typed some version of these, more than once:
 
 You correct the model. It apologizes. Next session — same failure. `CLAUDE.md` files were supposed to fix this, but they're written once, by hand, from imagination, and they rot. Meanwhile the actual specification of how you want your AI to behave is sitting in your transcript history, written by you, in the form of corrections — and nobody is reading it.
 
+One of us typed "it's still not fixed" at an AI **106 times** before realizing: we weren't chatting, we were writing documentation nobody read.
+
 This repo reads it.
 
 ## The system in one diagram
