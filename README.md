@@ -148,6 +148,11 @@ Requirements: Claude Code CLI. macOS for the automated weekly job (elsewhere: ru
 
 교정이 자동으로 규칙이 되는 CLAUDE.md 시스템입니다. 세션 트랜스크립트에서 반복 교정을 채굴해 규칙으로 승격하고(2회 반복 시에만 — 과적합 방지), 행동 트랩 프로브로 회귀를 검증하며, 작업 유형별 3티어 라우팅(기계적=하위 모델, 생산=중위, 판단=상위 고정)과 위임 원장으로 Devin Fusion형 멀티모델 운영을 Claude Code 위에 구현합니다. 실제 24시간 운영에서 v1.0에서 v1.8까지 진화했고, 그중 두 번은 사람 개입 없이 주간 자동 실행이 스스로 승격했습니다. 케이스 스터디: [docs/CASE-STUDY.md](docs/CASE-STUDY.md)
 
+## Related work
+
+- **[MoAI-ADK](https://github.com/modu-ai/moai-adk)** — a SPEC-first agentic development kit for Claude Code (24 agents, Go binary, TRUST quality gates). Complementary problem: MoAI systematizes *how the AI should develop* (methodology-first); this repo systematizes *who the AI works for* (a personal spec mined from your own corrections, with versioned provenance). They compose — nothing stops a MoAI project from running this evolution loop on top.
+- **[afk-company](https://github.com/dennykim123/afk-company)** — absence-first unattended ops driven by the same routing table.
+
 ## Credits
 
 - Routing grounded in [Cognition — Devin Fusion](https://cognition.com/blog/devin-fusion) (their measurements; independent implementation, no affiliation)
