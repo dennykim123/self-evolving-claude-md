@@ -116,6 +116,10 @@ python3 ~/.claude/office/mine.py --days 30    # mine your own history — this r
 
 Requirements: Claude Code CLI. macOS for the automated weekly job (elsewhere: run `evolve.sh` from cron/systemd). Codex CLI optional.
 
+## Judgment modules (beyond rules)
+
+Rules keep models on your floor; **judgment modules turn your recurring judgments into skills** — a money screener, a one-page structurer, a proposal closer, chained by an orchestrator that stops on NO. Each has a fixed input → criteria → output contract, and a personal asset registry isolated as instance data. Field-tested pattern, shipped as fill-in templates: [templates/judgment-modules/](templates/judgment-modules/)
+
 ## Compared to what you're doing now
 
 | | hand-written CLAUDE.md | memory/notes files | **this** |
